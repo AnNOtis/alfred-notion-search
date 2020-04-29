@@ -1,0 +1,22 @@
+{
+  "name": "alfred-notion-search",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Search your Notion via Alfred",
+  "author": {
+    "name": "Otis Chou",
+    "email": "otischou.tw@gmail.com",
+    "url": "https://otischou.tw"
+  },
+  "dependencies": {
+    "alfy": "^0.9.1",
+    "lodash": "^4.17.15"
+  },
+  "engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"postinstall": "alfy-init",
+		"preuninstall": "alfy-cleanup"
+	}
+}
