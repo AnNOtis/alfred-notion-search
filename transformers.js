@@ -61,6 +61,10 @@ function getLink(domain, id, anchorId) {
   return `notion://www.notion.so/${domain}/x-${id.replace(/-/g, '')}${anchor}`
 }
 
+function isCustomIcon (icon) {
+  return /^https/.test(icon)
+}
+
 export function mapSearchToAlfredOutput(domain, searchResponse) {
   const output = searchResponse.results.map(item => {
     const { id, score } = item
@@ -76,7 +80,7 @@ export function mapSearchToAlfredOutput(domain, searchResponse) {
     return {
       _score: score,
       _type: block.type,
-      title: icon ? `${icon} ${title}` : title,
+      title: (icon && !isCustomIcon(icon)) ? `${icon} ${title}` : title,
       subtitle: breadcrumbs,
       arg: link,
       icon: {
@@ -85,5 +89,6 @@ export function mapSearchToAlfredOutput(domain, searchResponse) {
     }
   })
 
-  return sortByPageFirst(output)
+  return output
+  // return sortByPageFirst(output)
 }
