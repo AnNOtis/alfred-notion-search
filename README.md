@@ -8,7 +8,7 @@
 ## Install
 
 ```
-$ npm install --global alfred-emoj
+$ npm install --global alfred-notion-search
 ```
 
 Change `space_id` & `token_v2` in Alfred workflow environment variables.
