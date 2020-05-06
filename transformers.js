@@ -65,6 +65,15 @@ function isCustomIcon (icon) {
   return /^https/.test(icon)
 }
 
+const noResultMessage = {
+  title: "❌ Empty Result",
+  subtitle: "Try another keyword",
+  autocomplete: "",
+  icon: {
+    path: './notion_logo.png'
+  }
+}
+
 export function mapSearchToAlfredOutput(domain, searchResponse) {
   const output = searchResponse.results.map(item => {
     const { id, score } = item
@@ -89,6 +98,5 @@ export function mapSearchToAlfredOutput(domain, searchResponse) {
     }
   })
 
-  return output
-  // return sortByPageFirst(output)
+  return output.length ? output : [noResultMessage]
 }
