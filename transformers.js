@@ -70,7 +70,7 @@ const noResultMessage = {
   subtitle: "Try another keyword",
   autocomplete: "",
   icon: {
-    path: './notion_logo.png'
+    path: './icon.png'
   }
 }
 
@@ -93,7 +93,7 @@ export function mapSearchToAlfredOutput(domain, searchResponse) {
       subtitle: breadcrumbs,
       arg: link,
       icon: {
-        path: './notion_logo.png'
+        path: './icon.png'
       }
     }
   })
