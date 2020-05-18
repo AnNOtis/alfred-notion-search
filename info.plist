@@ -123,9 +123,9 @@
 	<key>variables</key>
 	<dict>
 		<key>space_id</key>
-		<string>f6e71fb4-118f-45f2-91f0-2af3732be060</string>
+		<string></string>
 		<key>token_v2</key>
-		<string>2d23d231fd9828c243581de46f6acacd2847599a97548021d1711578b2a4d3ce59c9cc3847dd8c513963e915a6b4e3dc8556584daaf6092c6340b4d7e683e5fc44418df3989f1b0a3ab49249b86c</string>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
