@@ -5,7 +5,7 @@ import { mapSearchToAlfredOutput, getDomain } from './transformers'
 const spaceInfo = await fetchSpaceInfo()
 const domain = getDomain(spaceInfo)
 
-const searchResponse = await search(alfy.input)
+const searchResponse = await search(alfy.input.normalize())
 const result = mapSearchToAlfredOutput(domain, searchResponse)
 
 alfy.output(result)
